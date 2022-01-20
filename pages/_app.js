@@ -1,7 +1,34 @@
-import '../styles/index.css'
+import "../styles/index.css";
+import Layout from "../components/Layout";
+import React from "react";
+import NextApp from "next/app";
+import withReduxStore from "../lib/with-redux-store";
+import { Provider } from "react-redux";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+class App extends NextApp {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return {
+      pageProps,
+    };
+  }
+
+  render() {
+    const { Component, pageProps, reduxStore } = this.props;
+
+    return (
+      <Provider store={reduxStore}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
+    );
+  }
 }
 
-export default MyApp
+export default withReduxStore(App);

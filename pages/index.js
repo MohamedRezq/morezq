@@ -1,43 +1,45 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import Head from "next/head";
+import Image from "next/image";
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import { getAllSkills } from "../lib/api";
+import { storeSkills } from "../store/skills/skillsSlice";
 
-export default function Index({ preview, allPosts }) {
-  const heroPost = allPosts[0].node
-  const morePosts = allPosts.slice(1)
+const IndexPage = ({ storedSkills, allSkills, storeSkills }) => {
+  useEffect(() => {
+    storeSkills(allSkills);
+  }, []);
+  
   return (
     <>
-      <Layout preview={preview}>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverimage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost._meta.uid}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
+      <Head>
+        <title>MOREZQ</title>
+      </Head>
+      <div>
+        {allSkills.map((skill, i) => (
+          <div key={i} className="flex justify-between w-around">
+            <div>
+              {skill.node.name[0].text}
+            </div>
+            <div>
+              <Image width={50} height={50} src={skill.node.img.url} />
+            </div>
+          </div>
+        ))}
+      </div>
     </>
-  )
-}
+  );
+};
 
-export async function getStaticProps({ preview = false, previewData }) {
-  const allPosts = await getAllPostsForHome(previewData)
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = { storeSkills };
+
+export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);
+
+export async function getStaticProps() {
+  const allSkills = await getAllSkills();
   return {
-    props: { preview, allPosts },
+    props: { allSkills },
   }
 }
