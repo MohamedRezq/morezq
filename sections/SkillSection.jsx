@@ -33,7 +33,8 @@ const SkillSection = ({
   ];
   const [currentTab, setCurrentTab] = useState("All");
   const [shownSkills, setShownSkills] = useState(storedSkills);
-  console.log(storedSkills);
+  let j = 0;
+  console.log("storedSkills on ",j,": ",storedSkills);
   useEffect(() => {
     switch (currentTab) {
       case "All":
@@ -89,7 +90,7 @@ const SkillSection = ({
                 <option
                   key={tab.name}
                   value={tab.name}
-                  onClick={() => setCurrentTab(tab.name)}
+                  onSelect={() => setCurrentTab(tab.name)}
                 >
                   {tab.name}
                 </option>
@@ -102,7 +103,6 @@ const SkillSection = ({
             <nav aria-label="Tabs">
               <ul className="flex flex-wrap justify-center md:space-x-2 lg:space-x-5">
                 {tabs.map((tab) => {
-                  const Icon = tab.icon;
                   return (
                     <li
                       key={tab.name}
