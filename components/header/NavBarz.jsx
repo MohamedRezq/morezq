@@ -37,7 +37,7 @@ function NavTripleMenu() {
   `;
 
   return (
-    <div className="w-full navBarContainer fixed" style={{ zIndex: "1000"}}>
+    <div className="w-full navBarContainer fixed" style={{ zIndex: "1000" }}>
       <div
         className="flex items-center h-20 px-6 justify-between shadow-sm relative"
         style={{
@@ -116,20 +116,13 @@ function NavTripleMenu() {
             data-bs-placement="bottom"
             title="Let's do something GREAT !!"
           >
-            <NavLink
-            activeClass="active"
-            href=""
-            to="contact_section"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            onSetActive={() => {
-              handleSetActive();
-            }}
-          >
-            <span className="text-lg text-white">Hire Me <i className="fas fa-handshake mx-1"></i></span>
-            </NavLink>
+            <a
+              href="https://www.linkedin.com/in/mohamed-rezq-2021/"
+              target="_blank"
+              className="text-lg text-white no-underline"
+            >
+              Hire Me <i className="fas fa-handshake mx-1"></i>
+            </a>
           </button>
         </div>
         <button

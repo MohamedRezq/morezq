@@ -13,7 +13,14 @@ import FloatingSocialBar from "./../components/FloatingSocialBar";
 import { storeBlogs } from "../store/blogs/blogsSlice";
 import { storeProjects } from "../store/projects/projectsSlice";
 
-const IndexPage = ({ allSkills, storeSkills, allBlogs, storeBlogs, allProjects, storeProjects }) => {
+const IndexPage = ({
+  allSkills,
+  storeSkills,
+  allBlogs,
+  storeBlogs,
+  allProjects,
+  storeProjects,
+}) => {
   useEffect(() => {
     storeSkills(allSkills);
     storeBlogs(allBlogs);
@@ -24,13 +31,30 @@ const IndexPage = ({ allSkills, storeSkills, allBlogs, storeBlogs, allProjects, 
     <>
       <Head>
         <title>MOREZQ</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/favicon-16x16.png"
+        />
         <link
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
           crossorigin="anonymous"
         />
-        <link rel="icon" href="/favicon-32x32.png" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
