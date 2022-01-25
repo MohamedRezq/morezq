@@ -84,7 +84,7 @@ const SkillSection = ({
               id="current-tab"
               defaultValue={tabs.find((tab) => tab.name === currentTab).name}
               className="form-select w-full sm:w-auto block border-none py-2 text-md text-gray-500 font-semibold cursor-pointer focus:ring-0"
-              onChange={() => setCurrentTab(tab.name)}
+              onChange={(e) => console.log(e.target)}
             >
               {tabs.map((tab) => (
                 <option
