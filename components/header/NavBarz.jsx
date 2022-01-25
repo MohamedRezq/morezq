@@ -194,5 +194,3 @@ function NavTripleMenu() {
 }
 
 export default NavTripleMenu;
-
-//       style={{ backgroundColor: "rgba(220, 220, 220 ,0.5)" }}

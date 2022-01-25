@@ -6,13 +6,13 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:600&display=swap";
 
 @layer utilities {
-  .transform-bgr1S-s1 {
+  .transform-bgr1-s1 {
     transform: rotatez(45deg) translate(5px, 0px);
   }
-  .transform-bgr1S-s2 {
+  .transform-bgr1-s2 {
     transform: rotatez(-45deg);
   }
-  .transform-bgr1S-s3 {
+  .transform-bgr1-s3 {
     width: 50%;
     transform: translate(14px, -5px) rotatez(45deg);
   }
