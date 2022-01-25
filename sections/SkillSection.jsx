@@ -127,7 +127,7 @@ const SkillSection = ({
         </div>
 
         <div className="grid mx-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-2">
-          {shownSkills.map((skill, i) => (
+          {((shownSkills.length > 0) ? shownSkills:storedSkills).map((skill, i) => (
             <div
               key={i}
               className="flex content-center justify-center skillContainer w-full my-2"
