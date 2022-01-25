@@ -33,9 +33,7 @@ const SkillSection = ({
   ];
   const [currentTab, setCurrentTab] = useState("All");
   const [shownSkills, setShownSkills] = useState(storedSkills);
-  let j = 0;
-  console.log("storedSkills on ",j,": ",storedSkills);
-  j++;
+  shownSkills = storedSkills;
   useEffect(() => {
     switch (currentTab) {
       case "All":
@@ -130,7 +128,7 @@ const SkillSection = ({
         </div>
 
         <div className="grid mx-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-2">
-          {storedSkills.map((skill, i) => (
+          {shownSkills.map((skill, i) => (
             <div
               key={i}
               className="flex content-center justify-center skillContainer w-full my-2"
