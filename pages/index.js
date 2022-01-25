@@ -2,8 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import LightBg from "../components/LightBg";
-import { getAllSkills } from "../lib/api";
+import { getAllSkills, getAllBlogs, getAllProjects } from "../lib/api";
 import BlogSection from "../sections/BlogSection";
 import Contact from "../sections/ContactSection";
 import AboutSection from "../sections/AboutSection";
@@ -11,10 +10,14 @@ import ProjectSection from "../sections/ProjectSection";
 import SkillSection from "../sections/SkillSection";
 import { storeSkills } from "../store/skills/skillsSlice";
 import FloatingSocialBar from "./../components/FloatingSocialBar";
+import { storeBlogs } from "../store/blogs/blogsSlice";
+import { storeProjects } from "../store/projects/projectsSlice";
 
-const IndexPage = ({ allSkills, storeSkills }) => {
+const IndexPage = ({ allSkills, storeSkills, allBlogs, storeBlogs, allProjects, storeProjects }) => {
   useEffect(() => {
     storeSkills(allSkills);
+    storeBlogs(allBlogs);
+    storeProjects(allProjects);
   }, []);
 
   return (
@@ -49,13 +52,15 @@ const IndexPage = ({ allSkills, storeSkills }) => {
 
 const mapStateToProps = (state) => ({});
 
-const mapDispatchToProps = { storeSkills };
+const mapDispatchToProps = { storeSkills, storeBlogs, storeProjects };
 
 export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);
 
 export async function getStaticProps() {
   const allSkills = await getAllSkills();
+  const allBlogs = await getAllBlogs();
+  const allProjects = await getAllProjects();
   return {
-    props: { allSkills },
+    props: { allSkills, allBlogs, allProjects },
   };
 }

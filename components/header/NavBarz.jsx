@@ -128,7 +128,7 @@ function NavTripleMenu() {
               handleSetActive();
             }}
           >
-            Hire Me <i className="fas fa-handshake mx-1"></i>
+            <span className="text-lg text-white">Hire Me <i className="fas fa-handshake mx-1"></i></span>
             </NavLink>
           </button>
         </div>

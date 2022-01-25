@@ -1,43 +1,47 @@
 import ScrollAnimation from "react-animate-on-scroll";
 
-const BlogCard = ({ order }) => {
+const BlogCard = ({ order, blog }) => {
   return (
-    <ScrollAnimation animateOnce={true} className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm" animateIn="bounceInUp" duration={1+order}>
-      <img
-        src="https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-        className="object-cover w-full h-64"
-        alt=""
-      />
+    <ScrollAnimation
+      animateOnce={true}
+      className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm border-2 border-gray-100"
+      animateIn="bounceInUp"
+      duration={1 + order}
+    >
+      <a href="">
+        <img
+          src={blog.node.image.url}
+          className="object-cover w-full h-64 border-b-2"
+          alt={blog.node.image.alt}
+        />
+      </a>
       <div className="p-5 border border-t-0">
         <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
           <a
             href="/"
-            className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+            className="transition-colors duration-200 text-blue-gray-900 hover:text-cyan-900"
             aria-label="Category"
-            title="traveling"
+            title="MOREZQ - Web Developer"
           >
-            traveling
+            MOREZQ
           </a>
-          <span className="text-gray-600">— 28 Dec 2020</span>
+          <span className="text-gray-600">— {blog.node.release_date}</span>
         </p>
         <a
           href="/"
           aria-label="Category"
-          title="Visit the East"
-          className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+          title={`${blog.node.title[0].text} - Read full blog`}
+          className="inline-block mb-3 text-lg font-bold leading-5 transition-colors duration-200 hover:text-cyan-900"
         >
-          Visit the East
+          {blog.node.title[0].text}
         </a>
-        <p className="mb-2 text-gray-700">
-          Sed ut perspiciatis unde omnis iste natus error sit sed quia
-          consequuntur magni voluptatem doloremque.
-        </p>
+        <p className="mb-2 text-gray-700">{blog.node.description[0].text}</p>
         <a
           href="/"
           aria-label=""
           className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
         >
-          Learn more
+          Read full blog
         </a>
       </div>
     </ScrollAnimation>

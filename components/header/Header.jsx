@@ -167,7 +167,7 @@ const Header = () => {
           </div>
         </div>
         <a
-          href="https://www.buymeacoffee.com/dgauderman"
+          href="https://github.com/MohamedRezq"
           target="_blank"
           className="md:absolute bottom-0 right-0 p-4 float-right animate-bounce"
           aria-label="MOREZQ GitHub Profile"

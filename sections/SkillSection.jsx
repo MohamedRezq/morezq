@@ -64,7 +64,7 @@ const SkillSection = ({
   return (
     <div>
       <Element name="skill_section" className="element"></Element>
-      <div className="py-10 mt-32">
+      <div className="py-8">
         <AnimatedTitle title="SKILLS" />
         <div className="mx-auto w-full max-w-5xl sm:border-b-2 border-gray-200 mb-5">
           {/* :SMALL DEVICES */}
