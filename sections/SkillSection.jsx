@@ -35,6 +35,7 @@ const SkillSection = ({
   const [shownSkills, setShownSkills] = useState(storedSkills);
   let j = 0;
   console.log("storedSkills on ",j,": ",storedSkills);
+  j++;
   useEffect(() => {
     switch (currentTab) {
       case "All":
@@ -61,6 +62,7 @@ const SkillSection = ({
       default:
         break;
     }
+    console.log("shownSkills Now: ", shownSkills);
   }, [currentTab]);
   return (
     <div>
