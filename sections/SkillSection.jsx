@@ -32,8 +32,6 @@ const SkillSection = ({
     { name: "Misc" },
   ];
   const [currentTab, setCurrentTab] = useState("All");
-  const [shownSkills, setShownSkills] = useState(storedSkills);
-  shownSkills = storedSkills;
   useEffect(() => {
     switch (currentTab) {
       case "All":
@@ -62,6 +60,7 @@ const SkillSection = ({
     }
     console.log("shownSkills Now: ", shownSkills);
   }, [currentTab]);
+  const [shownSkills, setShownSkills] = useState(storedSkills);
   return (
     <div>
       <Element name="skill_section" className="element"></Element>
