@@ -51,7 +51,7 @@ const Contact = () => {
               onSubmit={sendEmail}
               className="flex flex-wrap -m-2"
             >
-              <div className="p-2 w-1/2">
+              <div className="p-2 sm:w-1/2">
                 <div className="relative">
                   <label
                     htmlFor="name"
@@ -67,7 +67,7 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              <div className="p-2 w-1/2">
+              <div className="p-2 sm:w-1/2">
                 <div className="relative">
                   <label
                     htmlFor="email"
