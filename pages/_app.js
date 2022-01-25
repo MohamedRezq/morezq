@@ -1,5 +1,5 @@
 import "./../styles/index.css";
-import Layout from "./../components/Layout";
+import Layout from "../components/layout";
 import React from "react";
 import NextApp from "next/app";
 import withReduxStore from "./../lib/with-redux-store";
