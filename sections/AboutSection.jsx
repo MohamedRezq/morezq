@@ -17,7 +17,7 @@ const AboutSection = () => {
           loc="right"
         />
         <div
-          className="block md:hidden my-20 flex flex-col w-full my-3 font-serif"
+          className="md:hidden my-20 flex flex-col w-full font-serif"
           style={{ fontSize: "36pt" }}
         >
           WHO I AM

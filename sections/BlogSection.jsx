@@ -10,7 +10,7 @@ const BlogSection = ({ storedBlogs }) => {
       <div className="py-10 mt-32">
         <AnimatedTitle className="hidden md:block" title="BLOG LIBRARY" />
         <div
-          className="block md:hidden my-20 flex flex-col w-full my-3 font-serif"
+          className="md:hidden my-20 flex flex-col w-full font-serif"
           style={{ fontSize: "36pt" }}
         >
           BLOG LIBRARY
