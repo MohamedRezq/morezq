@@ -89,7 +89,8 @@ const SkillSection = ({
                 <option
                   key={tab.name}
                   value={tab.name}
-                  onSelect={(e) => console.log(e.target)}
+                  onClick={(e) => console.log("Clicked: ",e.target)}
+                  onChange={(e) => console.log("Changed: ",e.target)}
                 >
                   {tab.name}
                 </option>
