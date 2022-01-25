@@ -33,6 +33,7 @@ const SkillSection = ({
   ];
   const [currentTab, setCurrentTab] = useState("All");
   const [shownSkills, setShownSkills] = useState(storedSkills);
+  console.log(storedSkills);
   useEffect(() => {
     switch (currentTab) {
       case "All":
@@ -127,12 +128,30 @@ const SkillSection = ({
         </div>
 
         <div className="grid mx-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-2">
-          {shownSkills.map((skill, i) => (
+          {((shownSkills === []) ? storedSkills:shownSkills).map((skill, i) => (
             <div
               key={i}
               className="flex content-center justify-center skillContainer w-full my-2"
             >
-              <SkillCard skill={skill} />
+              <div
+                className="rounded-full flex content-center justify-center box-content"
+                style={{ outline: "solid 8px #0e7490" }}
+              >
+                <Image
+                  src={skill.node.img.url}
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+              </div>
+              <div className="flex justify-center content-center w-full">
+                <div
+                  className="my-auto px-4 text-md text-white font-bold rounded-md py-1 w-full"
+                  style={{ backgroundColor: "#0e7490" }}
+                >
+                  {skill.node.name[0].text}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -154,29 +173,3 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SkillSection);
-
-const SkillCard = ({skill}) => {
-  return (
-    <div>
-      <div
-        className="rounded-full flex content-center justify-center box-content"
-        style={{ outline: "solid 8px #0e7490" }}
-      >
-        <Image
-          src={skill.node.img.url}
-          width={50}
-          height={50}
-          className="rounded-full"
-        />
-      </div>
-      <div className="flex justify-center content-center w-full">
-        <div
-          className="my-auto px-4 text-md text-white font-bold rounded-md py-1 w-full"
-          style={{ backgroundColor: "#0e7490" }}
-        >
-          {skill.node.name[0].text}
-        </div>
-      </div>
-    </div>
-  );
-};
