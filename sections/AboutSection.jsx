@@ -11,11 +11,7 @@ const AboutSection = () => {
     <div>
       <Element name="about_section" className="element"></Element>
       <div className="py-10 mt-32">
-        <AnimatedTitle
-          className="hidden md:block"
-          title="WHO I AM"
-          loc="right"
-        />
+        <AnimatedTitle title="WHO I AM" loc="right" />
         <div
           className="md:hidden my-20 flex flex-col w-full font-serif"
           style={{ fontSize: "36pt" }}

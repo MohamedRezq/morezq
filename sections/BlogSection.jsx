@@ -8,7 +8,7 @@ const BlogSection = ({ storedBlogs }) => {
     <div>
       <Element name="blog_section" className="element"></Element>
       <div className="py-10 mt-32">
-        <AnimatedTitle className="hidden md:block" title="BLOG LIBRARY" />
+        <AnimatedTitle title="BLOG LIBRARY" />
         <div
           className="md:hidden my-20 flex flex-col w-full font-serif"
           style={{ fontSize: "36pt" }}

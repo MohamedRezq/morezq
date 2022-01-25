@@ -8,7 +8,7 @@ const ProjectSection = ({ storedProjects }) => {
     <div>
       <Element name="proj_section"></Element>
       <div className="py-10 mt-32">
-        <AnimatedTitle className="hidden md:flex" title="TESTIMONIALS" loc="right" />
+        <AnimatedTitle title="TESTIMONIALS" loc="right" />
         <div
           className="md:hidden my-20 flex flex-col w-full font-serif"
           style={{ fontSize: "36pt" }}

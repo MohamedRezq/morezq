@@ -3,7 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 const AnimatedTitle = ({ title, loc = "left" }) => {
   if (loc === "left") {
     return (
-      <div className="my-20 flex flex-col w-full">
+      <div className="my-20 hidden md:flex flex-col w-full">
         <ScrollAnimation
           animateIn="bounceInRight"
           className="my-3 font-serif"
@@ -20,7 +20,7 @@ const AnimatedTitle = ({ title, loc = "left" }) => {
   }
   if (loc === "right") {
     return (
-      <div className="my-20 flex flex-col w-full items-end">
+      <div className="my-20 hidden md:flex flex-col w-full items-end">
         <ScrollAnimation
           animateIn="bounceInLeft"
           className="my-3 font-serif"

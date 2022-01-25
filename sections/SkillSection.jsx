@@ -66,7 +66,7 @@ const SkillSection = ({
     <div>
       <Element name="skill_section" className="element"></Element>
       <div className="py-8">
-        <AnimatedTitle className="hidden md:block" title="SKILLS" />
+        <AnimatedTitle title="SKILLS" />
         <div
           className="md:hidden my-20 flex flex-col w-full font-serif"
           style={{ fontSize: "36pt" }}
