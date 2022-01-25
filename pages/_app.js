@@ -1,8 +1,8 @@
-import "../styles/index.css";
-import Layout from "../components/Layout";
+import "./../styles/index.css";
+import Layout from "./../components/Layout";
 import React from "react";
 import NextApp from "next/app";
-import withReduxStore from "../lib/with-redux-store";
+import withReduxStore from "./../lib/with-redux-store";
 import { Provider } from "react-redux";
 
 class App extends NextApp {

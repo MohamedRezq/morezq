@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import AnimatedTitle from "../components/AnimatedTitle";
+import AnimatedTitle from "./../components/AnimatedTitle";
 import ProjectCard from "./../components/ProjectCard";
 import { connect } from "react-redux";
 

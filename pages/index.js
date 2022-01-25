@@ -2,16 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { getAllSkills, getAllBlogs, getAllProjects } from "../lib/api";
-import BlogSection from "../sections/BlogSection";
-import Contact from "../sections/ContactSection";
-import AboutSection from "../sections/AboutSection";
-import ProjectSection from "../sections/ProjectSection";
-import SkillSection from "../sections/SkillSection";
-import { storeSkills } from "../store/skills/skillsSlice";
+import { getAllSkills, getAllBlogs, getAllProjects } from "./../lib/api";
+import BlogSection from "./../sections/BlogSection";
+import Contact from "./../sections/ContactSection";
+import AboutSection from "./../sections/AboutSection";
+import ProjectSection from "./../sections/ProjectSection";
+import SkillSection from "./../sections/SkillSection";
+import { storeSkills } from "./../store/skills/skillsSlice";
 import FloatingSocialBar from "./../components/FloatingSocialBar";
-import { storeBlogs } from "../store/blogs/blogsSlice";
-import { storeProjects } from "../store/projects/projectsSlice";
+import { storeBlogs } from "./../store/blogs/blogsSlice";
+import { storeProjects } from "./../store/projects/projectsSlice";
 
 const IndexPage = ({
   allSkills,

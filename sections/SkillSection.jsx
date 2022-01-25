@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import AnimatedTitle from "../components/AnimatedTitle";
+import AnimatedTitle from "./../components/AnimatedTitle";
 import ScrollAnimation from "react-animate-on-scroll";
 import {
   Link,

@@ -2,7 +2,7 @@ import Image from "next/image";
 import authorImg from "./../assets/author.jpg";
 import { useTheme } from "next-themes";
 import ScrollAnimation from "react-animate-on-scroll";
-import AnimatedTitle from "../components/AnimatedTitle";
+import AnimatedTitle from "./../components/AnimatedTitle";
 import { Element } from "react-scroll";
 
 const AboutSection = () => {
