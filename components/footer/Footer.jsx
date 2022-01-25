@@ -50,7 +50,7 @@ const Footer = () => {
                 title="Our phone"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:font-bolder"
               >
-                850-123-5021
+                +20 0122-789-1252
               </a>
             </div>
             <div className="flex">

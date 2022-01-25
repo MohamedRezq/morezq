@@ -8,7 +8,14 @@ const ProjectSection = ({ storedProjects }) => {
     <div>
       <Element name="proj_section"></Element>
       <div className="py-10 mt-32">
-        <AnimatedTitle title="TESTIMONIALS" loc="right" />
+        <AnimatedTitle className="hidden md:block" title="TESTIMONIALS" loc="right" />
+        <div
+          className="block md:hidden my-20 flex flex-col w-full my-3 font-serif"
+          style={{ fontSize: "36pt" }}
+        >
+          TESTIMONIALS
+          <hr className="border-2 border-black ml-2" />
+        </div>
         <div className="grid lg:grid-cols-2 mt-10">
           {storedProjects.map((proj, i) => (
             <ProjectCard key={i} proj={proj} />

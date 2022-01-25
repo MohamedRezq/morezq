@@ -8,7 +8,14 @@ const BlogSection = ({ storedBlogs }) => {
     <div>
       <Element name="blog_section" className="element"></Element>
       <div className="py-10 mt-32">
-        <AnimatedTitle title="BLOG LIBRARY" />
+        <AnimatedTitle className="hidden md:block" title="BLOG LIBRARY" />
+        <div
+          className="block md:hidden my-20 flex flex-col w-full my-3 font-serif"
+          style={{ fontSize: "36pt" }}
+        >
+          BLOG LIBRARY
+          <hr className="border-2 border-black ml-2" />
+        </div>
         <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
           {storedBlogs.map((blog, i) => (
             <BlogCard key={i} order={i} blog={blog} />

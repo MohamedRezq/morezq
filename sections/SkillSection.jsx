@@ -35,6 +35,7 @@ const SkillSection = ({
   const [currentTab, setCurrentTab] = useState("All");
   const [shownSkills, setShownSkills] = useState(storedSkills);
   useEffect(() => {
+    setCurrentTab("All");
     switch (currentTab) {
       case "All":
         setShownSkills(storedSkills);
@@ -65,7 +66,14 @@ const SkillSection = ({
     <div>
       <Element name="skill_section" className="element"></Element>
       <div className="py-8">
-        <AnimatedTitle title="SKILLS" />
+        <AnimatedTitle className="hidden md:block" title="SKILLS" />
+        <div
+          className="block md:hidden my-20 flex flex-col w-full my-3 font-serif"
+          style={{ fontSize: "36pt" }}
+        >
+          Skills
+          <hr className="border-2 border-black ml-2" />
+        </div>
         <div className="mx-auto w-full max-w-5xl sm:border-b-2 border-gray-200 mb-5">
           {/* :SMALL DEVICES */}
           <div className="my-10 mx-auto max-w-md sm:hidden rounded-lg border border-gray-300 overflow-hidden">

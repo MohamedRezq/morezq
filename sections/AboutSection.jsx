@@ -11,7 +11,18 @@ const AboutSection = () => {
     <div>
       <Element name="about_section" className="element"></Element>
       <div className="py-10 mt-32">
-        <AnimatedTitle title="WHO I AM" loc="right" />
+        <AnimatedTitle
+          className="hidden md:block"
+          title="WHO I AM"
+          loc="right"
+        />
+        <div
+          className="block md:hidden my-20 flex flex-col w-full my-3 font-serif"
+          style={{ fontSize: "36pt" }}
+        >
+          WHO I AM
+          <hr className="border-2 border-black ml-2" />
+        </div>
         <ScrollAnimation
           className="flex w-full flex-col md:flex-row"
           animateIn="fadeInUp"
