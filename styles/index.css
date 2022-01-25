@@ -3,3 +3,124 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+@import "https://fonts.googleapis.com/css?family=Montserrat:600&display=swap";
+
+@layer utilities {
+  .transform-bgr1S-s1 {
+    transform:rotatez(45deg) translate(5px,0px);
+    }
+  .transform-bgr1S-s2 {
+    transform:rotatez(-45deg);
+  }
+  .transform-bgr1S-s3 {
+    width:50%;
+    transform: translate(14px,-5px) rotatez(45deg);
+  }
+}
+
+
+.bannerImg {
+  filter: brightness(30%) !important;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.headerContainer {
+  z-index: 10;
+}
+
+.heeey {
+  backgorund: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        )
+}
+
+
+/* Social Bar */
+
+nav.socialBar {
+  position: fixed;
+  width: 30px;
+  transition: all 0.3s linear;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  left: 0;
+}
+
+nav.socialBar ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  list-style: none;
+  color: rgba(0, 0, 0, 0.3);
+  padding-left: 0;
+}
+
+nav.socialBar li {
+  height: 45px;
+  position: relative;
+}
+
+nav.socialBar li a {
+  color: #fff !important;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 45px;
+  padding-left: 25%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  transition: all 0.3s linear;
+  text-decoration: none !important;
+}
+
+nav.socialBar li:nth-child(1) a {
+  background: #4267b2;
+}
+
+/*nav.socialBar li:nth-child(2) a {
+  background: #1DA1F2
+}*/
+
+nav.socialBar li:nth-child(2) a {
+  background: #e1306c;
+}
+
+nav.socialBar li:nth-child(3) a {
+  background: #2867b2;
+}
+
+nav.socialBar li:nth-child(4) a {
+  background: #333;
+}
+
+nav.socialBar li:nth-child(5) a {
+  background: #ff0000;
+}
+
+nav.socialBar li a i {
+  position: absolute;
+  top: 14px;
+  font-size: 15px;
+}
+
+nav.socialBar ul li a span {
+  display: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav.socialBar a:hover {
+  z-index: 1;
+  width: 160px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+nav.socialBar ul li:hover a span {
+  padding-left: 20%;
+  display: block;
+  font-size: 15px;
+}
+
+/* End of Social Bar */
