@@ -31,10 +31,8 @@ const SkillSection = ({
     { name: "Back-End" },
     { name: "Misc" },
   ];
-
   const [currentTab, setCurrentTab] = useState("All");
   const [shownSkills, setShownSkills] = useState(storedSkills);
-    console.log("shownSkills on start: ", shownSkills);
   useEffect(() => {
     switch (currentTab) {
       case "All":
@@ -134,25 +132,7 @@ const SkillSection = ({
               key={i}
               className="flex content-center justify-center skillContainer w-full my-2"
             >
-              <div
-                className="rounded-full flex content-center justify-center box-content"
-                style={{ outline: "solid 8px #0e7490" }}
-              >
-                <Image
-                  src={skill.node.img.url}
-                  width={50}
-                  height={50}
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex justify-center content-center w-full">
-                <div
-                  className="my-auto px-4 text-md text-white font-bold rounded-md py-1 w-full"
-                  style={{ backgroundColor: "#0e7490" }}
-                >
-                  {skill.node.name[0].text}
-                </div>
-              </div>
+              <SkillCard skill={skill} />
             </div>
           ))}
         </div>
@@ -174,3 +154,29 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SkillSection);
+
+const SkillCard = ({skill}) => {
+  return (
+    <div>
+      <div
+        className="rounded-full flex content-center justify-center box-content"
+        style={{ outline: "solid 8px #0e7490" }}
+      >
+        <Image
+          src={skill.node.img.url}
+          width={50}
+          height={50}
+          className="rounded-full"
+        />
+      </div>
+      <div className="flex justify-center content-center w-full">
+        <div
+          className="my-auto px-4 text-md text-white font-bold rounded-md py-1 w-full"
+          style={{ backgroundColor: "#0e7490" }}
+        >
+          {skill.node.name[0].text}
+        </div>
+      </div>
+    </div>
+  );
+};
