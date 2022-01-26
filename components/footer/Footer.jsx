@@ -24,7 +24,7 @@ const Footer = () => {
               title="Company"
               className="inline-flex items-center"
             >
-              <Image src={mLogo} width={50} height={50} />
+              <Image src={mLogo} width={50} height={50} alt="MOREZQ - Web Developer" />
               <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
                 MOREZQ
               </span>

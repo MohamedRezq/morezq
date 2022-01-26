@@ -141,6 +141,7 @@ const SkillSection = ({
                   width={50}
                   height={50}
                   className="rounded-full"
+                  alt="MOREZQ - Full Stack Web Developer"
                 />
               </div>
               <div className="flex justify-center content-center w-full">

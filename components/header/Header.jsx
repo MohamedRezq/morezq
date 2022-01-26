@@ -122,6 +122,7 @@ const Header = () => {
                   src={authorImg}
                   height={75}
                   width={75}
+                  alt="MOREZQ - Full Stack Web Developer"
                 />
               </div>
               <div
@@ -133,6 +134,7 @@ const Header = () => {
                   src={authorImg}
                   height={70}
                   width={70}
+                  alt="MOREZQ - Full Stack Web Developer"
                 />
               </div>
               " It's the time to bring your ideas to the world. <br />I have
@@ -175,7 +177,7 @@ const Header = () => {
         >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
-            alt="Github Page"
+            alt="MOREZQ Github Profile"
             className="transition-all rounded-full w-14  hover:shadow-sm shadow-lg ring hover:ring-8 ring-white hover:bg-white dark:bg-white"
           />
         </a>

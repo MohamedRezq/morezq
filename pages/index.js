@@ -30,7 +30,7 @@ const IndexPage = ({
   return (
     <>
       <Head>
-        <title>MOREZQ</title>
+        <title>MOREZQ - Web Developer</title>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -59,6 +59,10 @@ const IndexPage = ({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
         />
+        <meta charset="UTF-8" />
+        <meta name="description" content="MOREZQ - Full Stack Web Devloper specialized in Next.js" />
+        <meta name="keywords" content="MOREZQ, MERN, Next.js, Web, Developer, React.js, GraphQL, MongoDB, Freelancer, Professional, Javascript, Tailwind, Bootstrap, Hire, Full, Stack" />
+        <meta name="author" content="MOREZQ" />
       </Head>
       <div className="my-20 mx-auto relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20">
         <FloatingSocialBar />

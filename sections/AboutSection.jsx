@@ -39,6 +39,7 @@ const AboutSection = () => {
                 width={200}
                 height={200}
                 className="rounded-full"
+                alt="MOREZQ - Full Stack Web Developer"
               />
             </div>
           </div>

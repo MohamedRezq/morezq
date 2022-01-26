@@ -46,7 +46,7 @@ function NavTripleMenu() {
         }}
       >
         <a className="flex-1 no-underline flex h-12 content-center">
-          <Image src={logo} height={100} width={220} />
+          <Image src={logo} height={100} width={220} alt="MOREZQ - Full Stack Web Developer" />
         </a>
         <div className="flex-none hidden md:flex md:justify-center md:h-full text-md">
           <NavLink
@@ -182,6 +182,7 @@ function NavTripleMenu() {
                   src={authorImg}
                   height={50}
                   width={50}
+                  alt="MOREZQ - Full Stack Web Developer"
                 />{" "}
                 <div className="mx-2">MOREZQ</div>
               </div>
