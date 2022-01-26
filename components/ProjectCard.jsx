@@ -16,6 +16,7 @@ const ProjectCard = ({ proj }) => {
               <a
                 href="https://homell.vercel.app/"
                 title="Visit App"
+                target="_blank"
                 className="text-gray-900 text-xl font-medium no-underline"
               >
                 {proj.node.title[0].text}
