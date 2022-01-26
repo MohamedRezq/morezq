@@ -15,7 +15,9 @@ const ProjectCard = ({ proj }) => {
         <div className="p-6 flex flex-col justify-around">
           <div>
             <h5 className="text-gray-900 text-xl font-medium mb-2">
+            <a href="https://homell.vercel.app/" title="Visit App" className="text-gray-900 text-xl font-medium no-underline">
               {proj.node.title[0].text}
+              </a>
             </h5>
             <p className="text-gray-700 text-xs md:text-base mb-4">
               {proj.node.description[0].text}
